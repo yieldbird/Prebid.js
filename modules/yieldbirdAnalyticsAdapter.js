@@ -8,6 +8,9 @@ const GLOBAL_NAME = 'YieldbirdViewability'
 const COOKIE_STORAGE_EXPIRY = 32140800000
 const SESSION_COOKIE_TIMESTAMP = '_ybv_sct'
 
+// sendBeacon polyfill
+// https://github.com/miguelmota/Navigator.sendBeacon/blob/master/sendbeacon.js
+
 class CookieAccessor {
   read (name) {
     const parserCookies = document.cookie.split('; ').map(cookie => {
